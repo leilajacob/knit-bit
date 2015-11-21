@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Sweaters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Full pattern</th>
+      <th>Pattern repeat</th>
+      <th>Current size</th>
+      <th>Decrease row</th>
+      <th>Increase row</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sweaters.each do |sweater| %>
+      <tr>
+        <td><%= sweater.full_pattern %></td>
+        <td><%= sweater.pattern_repeat %></td>
+        <td><%= sweater.current_size %></td>
+        <td><%= sweater.decrease_row %></td>
+        <td><%= sweater.increase_row %></td>
+        <td><%= link_to 'Show', sweater %></td>
+        <td><%= link_to 'Edit', edit_sweater_path(sweater) %></td>
+        <td><%= link_to 'Destroy', sweater, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sweater', new_sweater_path %>

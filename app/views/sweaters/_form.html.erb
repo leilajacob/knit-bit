@@ -1,0 +1,34 @@
+<%= form_for(@sweater) do |f| %>
+  <% if @sweater.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sweater.errors.count, "error") %> prohibited this sweater from being saved:</h2>
+
+      <ul>
+      <% @sweater.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :current_size %><br>
+    <%= f.text_field :current_size %>
+  </div>
+  <div class="field">
+    <%= f.label :full_pattern %><br>
+    <%= f.text_area :full_pattern %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :pattern_repeat %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :decrease_row %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :increase_row %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

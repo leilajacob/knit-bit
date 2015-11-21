@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  full_pattern: MyText
+  pattern_repeat: MyString
+  current_size: MyString
+  decrease_row: MyString
+  increase_row: MyString
+
+two:
+  full_pattern: MyText
+  pattern_repeat: MyString
+  current_size: MyString
+  decrease_row: MyString
+  increase_row: MyString
