@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Current size:</strong>
+  <%= @top.current_size %>
+</p>
+
+<p>
+  <strong>Gauge:</strong>
+  <%= @top.gauge %>
+</p>
+
+<p>
+  <strong>Stitch:</strong>
+  <%= @top.stitch %>
+</p>
+
+<p>
+  <strong>Number of sts:</strong>
+  <%= @top.number_of_sts %>
+</p>
+
+<p>
+  <strong>Pattern repeat:</strong>
+  <%= @top.pattern_repeat %>
+</p>
+
+<p>
+  <strong>Instructions:</strong>
+  <%= @top.instructions %>
+</p>
+
+<%= link_to 'Edit', edit_top_path(@top) %> |
+<%= link_to 'Back', tops_path %>

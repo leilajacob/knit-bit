@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151120211620) do
+ActiveRecord::Schema.define(version: 20151123143017) do
 
   create_table "sweaters", force: :cascade do |t|
     t.text     "full_pattern"
@@ -19,6 +19,17 @@ ActiveRecord::Schema.define(version: 20151120211620) do
     t.string   "current_size"
     t.string   "decrease_row"
     t.string   "increase_row"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "tops", force: :cascade do |t|
+    t.string   "current_size"
+    t.float    "gauge"
+    t.string   "stitch"
+    t.integer  "number_of_sts"
+    t.string   "pattern_repeat"
+    t.string   "instructions"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
